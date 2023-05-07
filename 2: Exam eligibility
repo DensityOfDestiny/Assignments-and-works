@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int main () {
+    int attendence,a,b;
+    cout<<"No. of classes held\n";
+    cin>>a;
+    cout<<"No. of classes attended\n";
+    cin>>b;
+    attendence=b*100/a;
+    cout<<"Attendence % is="<<attendence<<endl;
+    if (attendence>100) {
+        cout<<"Wrong Inputs";
+    } else if (attendence>=75) {
+        cout<<"You are eligible to write the exam.";
+    } else {
+        cout<<"Your attendance is less than 75%, so you are not eligible to write the exam.";
+    }
+    return 0;
+}
