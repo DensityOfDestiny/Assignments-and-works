@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main () {
+    int attendence,a,b;
+    char med;
+    cout<<"No. of classes held\n";
+    cin>>a;
+    cout<<"No. of classes attended\n";
+    cin>>b;
+    attendence=b*100/a;
+    cout<<"Attendence % is="<<attendence<<endl;
+    cout<<"Do you have medical cause?(Y/N)"<<endl;
+    cin >>med;
+    if (attendence>100) {
+        cout<<"Wrong Inputs";
+    } else if (attendence>=75 || med=='Y') {
+        cout<<"You are eligible to write the exam.";
+    } else {
+        cout<<"You are not eligible to write the exam.";
+    }
+    return 0;
+}
