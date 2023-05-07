@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+int main () {
+    int n, sum=0, rem;
+    cout<<"Enter any positive number : ";
+    cin>>n;
+    cout<<"\nThe digits of input number \n";
+    while(n>0) {
+        rem=n%10;
+        sum=sum+rem;
+        cout<<rem<<"\t";
+        n=n/10;
+    }
+    cout<<"\n\nThe Sum of Digits of the input number is : "<<sum<<"\n";
+    return 0;
+}
