@@ -1,0 +1,29 @@
+class Solution {
+public:
+    int trailingZeroes(int n) {
+        int z_count=0;
+        int i,dup,fact;
+        dup=n;
+        fact=1;
+
+        while(dup>0){
+            fact*=dup;
+            dup--;
+        }
+
+        while(fact>0){
+            if(fact%10 == 0){
+                z_count++;
+            }
+            fact=fact/10;
+        }
+
+        if(n==0){
+            return 0;
+        }
+        else{
+            return z_count;
+        }
+        
+    }
+};
