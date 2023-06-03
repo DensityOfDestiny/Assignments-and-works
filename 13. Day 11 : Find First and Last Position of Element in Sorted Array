@@ -1,0 +1,17 @@
+vector<int> searchRange(vector<int> &arr, int x) {
+  int i, j;
+  vector<int> pos(2, -1);
+  for (i = 0; i < arr.size(); i++) {
+    if (arr[i] == x) {
+      pos[0] = i;
+      break;
+    }
+  }
+    for (j = arr.size() - 1; j >= 0; j--){
+      if (arr[j] == x) {
+        pos[1] = j;
+        break;
+      }
+  }
+  return pos;
+}
