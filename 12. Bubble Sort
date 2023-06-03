@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+void bubbleSort(vector<int> &arr, int n) {
+  int i, j, temp;
+
+  for (i = 0; i < arr.size() - 1; i++) {
+    for (j = 0; j < arr.size() - i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+}
