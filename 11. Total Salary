@@ -1,0 +1,18 @@
+#include <bits/stdc++.h> 
+int totalSalary(int basic, char grade) 
+{
+    float total_salary;
+    
+    total_salary=basic+((float(basic)*59)/100)+1300;
+    total_salary=(total_salary-int(total_salary)>=0.5)?total_salary+1:total_salary;
+
+    if(grade=='A'){
+        return total_salary+400;
+    }
+    else if(grade=='B'){
+        return total_salary+200;
+    }
+    else{
+        return total_salary;
+    }
+}
