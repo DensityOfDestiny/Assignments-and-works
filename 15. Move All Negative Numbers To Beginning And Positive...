@@ -1,0 +1,16 @@
+#include <bits/stdc++.h> 
+vector<int> separateNegativeAndPositive(vector<int> &nums){
+    vector<int> moved;
+    int i;
+    for(i=0;i<nums.size();i++){
+        if(nums[i]<0){
+            moved.push_back(nums[i]);
+        }
+    }
+    for(i=0;i<nums.size();i++){
+        if(nums[i]>=0){
+            moved.push_back(nums[i]);
+        }
+    }
+    return moved;
+}
