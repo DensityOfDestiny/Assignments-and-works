@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+vector<int> sumOfEvenOdd(long long num) {
+  vector<int> sums(2, 0);
+  while (num > 0) {
+    if ((num % 10) % 2 == 0) {
+      sums[0] += num % 10;
+    } else {
+      sums[1] += num % 10;
+    }
+    num /= 10;
+  }
+  return sums;
+}
