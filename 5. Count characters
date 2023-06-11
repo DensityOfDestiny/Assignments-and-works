@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+
+  /* Read input as specified in the question.
+   * Print output as specified in the question.
+   */
+  char str1;
+  cin >> str1;
+  int c1 = 0, c2 = 0, c3 = 0;
+  int i = 0;
+
+  while (str1 != '$') {
+
+    if (str1 >= 'a' && str1 <= 'z') {
+      c1++;
+    } else if (str1 >= '0' && str1 <= '9') {
+      c2++;
+
+    } else {
+      c3++;
+    }
+    str1 = getchar();
+  }
+  cout << c1 << " " << c2 << " " << c3;
+}
