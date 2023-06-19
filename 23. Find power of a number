@@ -1,0 +1,12 @@
+#include <bits/stdc++.h>
+long long Pow(int X, int N) {
+  int long long ans = X;
+  int i;
+  if (N == 0) {
+    return 1;
+  }
+  for (i = 2; i <= N; i++) {
+    ans *= X;
+  }
+  return ans;
+}
