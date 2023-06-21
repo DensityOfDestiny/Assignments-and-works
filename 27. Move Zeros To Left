@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+void moveZerosToLeft(int *arr, int n) {
+  int i, j;
+  vector<int> b(n, 0);
+  int idx = n - 1;
+  for (i = n - 1; i >= 0; i--) {
+    if (arr[i] != 0) {
+      b[idx] = arr[i];
+      idx--;
+    }
+  }
+  for (i = 0; i < n; i++) {
+    arr[i] = b[i];
+  }
+}
